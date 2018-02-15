@@ -1,13 +1,19 @@
 `timescale 1ns / 1ps
- /******************************************************************************
- * Purpose  : Takes in the frequency of a board at 100Mhz and divides it by a 
- *            32-bit decimal value to output a 480hz frequency. The period is 
- *            now 2.083 milli seconds.       
- *			
- * Notes    : This revision includes this appropriate comment header as 
- *		        instructed in 301 Syllabus Pg.3 and includes commenting for user 
- *            readability. Edited the purpose of the module.
- ******************************************************************************/
+//////////////////////////////////////////////////////////////////////////////////
+// File name: pixel_clk.v
+// 
+// 
+// Created by        Rosswell Tiongco on 2/13/18
+// Copyright © 2018  Rosswell Tiongco. All rights reserved.
+//
+// In submitting this file for class work at CSULB
+// I am confirming that this is my work and the work
+// of no one else. In submitting this code I acknowledge that
+// plagiarism in student project work is subject to dismissal
+// from the class
+//
+// Slows down the clock  
+////////////////////////////////////////////////////////////////////////////////// 
 module pixel_clk(clk_in, reset, tick);
 	input clk_in, reset;
    output tick;

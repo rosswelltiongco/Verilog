@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "C:/Users/Rosswell/Documents/Verilog/Counter/Top_Level_tb_isim_beh.exe" -prj "C:/Users/Rosswell/Documents/Verilog/Counter/Top_Level_tb_beh.prj" "work.Top_Level_tb" "work.glbl" 

@@ -21,13 +21,13 @@ module Top_Level(clk, rst, uphdnl, step, seg, anode, count_out);
    output [7:0] anode;
    
    output wire [7:0] count_out;
-   //wire [7:0] count_out;
    
    wire rst_synch, db_out, tick;
    
    //AISO(clk, rst, rst_synch);
    AISO  aiso (clk, rst, rst_synch);
    
+   //debounce(clk, rst, sw, p_o)
    debounce d0 (clk, rst_synch, step, db_out);
 
    //PED(clk, rst, level, tick);
@@ -36,7 +36,7 @@ module Top_Level(clk, rst, uphdnl, step, seg, anode, count_out);
    //counter(clk, rst, ped, uphdnl, count);
    counter a0 (clk, rst_synch, tick, uphdnl, count_out);
 
-   //disp_controller    (clk, reset    , d0            , d1            , d2 ,  d3 ,  d4 ,  d5 ,  d6 ,  d7 , anode, seg);
+   //disp_controller    (clk, reset    , d0            , d1            , d2  ,  d3 ,  d4 ,  d5 ,  d6 ,  d7 , anode, seg);
    disp_controller disp (clk, rst_synch, count_out[3:0], count_out[7:4], 4'b0, 4'b0, 4'b0, 4'b0, 4'b0, 4'b0, anode, seg);
 
 endmodule

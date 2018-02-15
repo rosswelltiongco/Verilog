@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/Verilog/Counter/AISO.xst" -ofn "C:/Users/Rosswell/Documents/Verilog/Counter/AISO.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counterUCF.ucf -p xc7a100t-csg324-3 AISO.ngc AISO.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc counterUCF.ucf -p xc7a100t-csg324-3 AISO.ngc AISO.ngd  

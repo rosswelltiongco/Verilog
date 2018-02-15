@@ -1,26 +1,18 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   13:50:54 02/14/2018
-// Design Name:   Top_Level
-// Module Name:   C:/Users/Rosswell/Documents/Verilog/Counter/Top_Level_tb.v
-// Project Name:  Counter
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: Top_Level
-//
-// Dependencies:
+//////////////////////////////////////////////////////////////////////////////////
+// File name: Top_Level.v
 // 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
 // 
-////////////////////////////////////////////////////////////////////////////////
+// Created by        Rosswell Tiongco on 2/14/18
+// Copyright © 2018  Rosswell Tiongco. All rights reserved.
+//
+// In submitting this file for class work at CSULB
+// I am confirming that this is my work and the work
+// of no one else. In submitting this code I acknowledge that
+// plagiarism in student project work is subject to dismissal
+// from the class
+//////////////////////////////////////////////////////////////////////////////////
 
 module Top_Level_tb;
 
@@ -49,16 +41,20 @@ module Top_Level_tb;
 	initial begin
 		// Initialize Inputs
 		clk = 0;
-		rst = 0;
-		uphdnl = 0;
+		rst = 1;
+		uphdnl = 1;
 		step = 0;
 
 		// Wait 100 ns for global reset to finish
-		#100;
-        
+		#100 rst = 0;
+      //#200 uphdnl = 0;  
 		// Add stimulus here
-
 	end
+
+   
+   always #5 clk = ~clk;
+   always #30000000 step = ~ step;
+   always #100000000 uphdnl = ~uphdnl;
       
 endmodule
 

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.34 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.34 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: Top_Level.prj
 
@@ -111,10 +111,10 @@ Analyzing Verilog file "C:\Users\Rosswell\Documents\Verilog\Counter\pixel_clk.v"
 Parsing module <pixel_clk>.
 Analyzing Verilog file "C:\Users\Rosswell\Documents\Verilog\Counter\hexto7segment.v" into library work
 Parsing module <hextosegment>.
-Analyzing Verilog file "C:\Users\Rosswell\Documents\Verilog\Counter\dflop.v" into library work
-Parsing module <dflop>.
 Analyzing Verilog file "C:\Users\Rosswell\Documents\Verilog\Counter\ad_mux.v" into library work
 Parsing module <ad_mux>.
+Analyzing Verilog file "C:\Users\Rosswell\Desktop\Counter\dflop.v" into library work
+Parsing module <dflop>.
 Analyzing Verilog file "C:\Users\Rosswell\Documents\Verilog\Counter\PED.v" into library work
 Parsing module <PED>.
 Analyzing Verilog file "C:\Users\Rosswell\Documents\Verilog\Counter\disp_controller.v" into library work
@@ -171,7 +171,7 @@ Synthesizing Unit <AISO>.
 Unit <AISO> synthesized.
 
 Synthesizing Unit <dflop>.
-    Related source file is "C:\Users\Rosswell\Documents\Verilog\Counter\dflop.v".
+    Related source file is "C:\Users\Rosswell\Desktop\Counter\dflop.v".
     Found 1-bit register for signal <q>.
     Summary:
 	inferred   1 D-type flip-flop(s).
@@ -179,40 +179,21 @@ Unit <dflop> synthesized.
 
 Synthesizing Unit <debounce>.
     Related source file is "C:\Users\Rosswell\Documents\Verilog\Counter\debounce.v".
-        zero = 3'b000
-        st0_1 = 3'b001
-        st0_2 = 3'b010
-        st0_3 = 3'b011
-        one = 3'b100
-        st1_1 = 3'b101
-        st1_2 = 3'b110
-        st1_3 = 3'b111
     Found 3-bit register for signal <p_s>.
     Found 20-bit register for signal <count>.
-    Found finite state machine <FSM_0> for signal <p_s>.
-    -----------------------------------------------------------------------
-    | States             | 8                                              |
-    | Transitions        | 22                                             |
-    | Inputs             | 2                                              |
-    | Outputs            | 1                                              |
-    | Clock              | clk_in (rising_edge)                           |
-    | Reset              | reset (positive)                               |
-    | Reset type         | asynchronous                                   |
-    | Reset State        | 000                                            |
-    | Encoding           | auto                                           |
-    | Implementation     | LUT                                            |
-    -----------------------------------------------------------------------
-    Found 20-bit adder for signal <count[19]_GND_4_o_add_1_OUT> created at line 31.
+    Found 1-bit register for signal <p_o>.
+    Found 20-bit adder for signal <count[19]_GND_4_o_add_1_OUT> created at line 36.
+    Found 1-bit 8-to-1 multiplexer for signal <n_o> created at line 54.
+    Found 3-bit 8-to-1 multiplexer for signal <n_s> created at line 54.
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  20 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
-	inferred   1 Finite State Machine(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
 Unit <debounce> synthesized.
 
 Synthesizing Unit <PED>.
     Related source file is "C:\Users\Rosswell\Documents\Verilog\Counter\PED.v".
-    Found 1-bit register for signal <delay_reg>.
+    Found 1-bit register for signal <meta_reg>.
     Summary:
 	inferred   1 D-type flip-flop(s).
 Unit <PED> synthesized.
@@ -220,8 +201,8 @@ Unit <PED> synthesized.
 Synthesizing Unit <counter>.
     Related source file is "C:\Users\Rosswell\Documents\Verilog\Counter\counter.v".
     Found 8-bit register for signal <count>.
-    Found 8-bit subtractor for signal <count[7]_GND_6_o_sub_2_OUT> created at line 28.
-    Found 8-bit adder for signal <count[7]_GND_6_o_add_0_OUT> created at line 27.
+    Found 8-bit subtractor for signal <count[7]_GND_6_o_sub_2_OUT> created at line 22.
+    Found 8-bit adder for signal <count[7]_GND_6_o_add_0_OUT> created at line 21.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred   8 D-type flip-flop(s).
@@ -236,7 +217,7 @@ Unit <disp_controller> synthesized.
 Synthesizing Unit <pixel_clk>.
     Related source file is "C:\Users\Rosswell\Documents\Verilog\Counter\pixel_clk.v".
     Found 11-bit register for signal <count>.
-    Found 11-bit adder for signal <count[10]_GND_8_o_add_2_OUT> created at line 25.
+    Found 11-bit adder for signal <count[10]_GND_8_o_add_2_OUT> created at line 31.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  11 D-type flip-flop(s).
@@ -246,7 +227,7 @@ Unit <pixel_clk> synthesized.
 Synthesizing Unit <pixel_controller>.
     Related source file is "C:\Users\Rosswell\Documents\Verilog\Counter\pixel_controller.v".
     Found 4-bit register for signal <present_state>.
-    Found finite state machine <FSM_1> for signal <present_state>.
+    Found finite state machine <FSM_0> for signal <present_state>.
     -----------------------------------------------------------------------
     | States             | 8                                              |
     | Transitions        | 8                                              |
@@ -290,18 +271,21 @@ Macro Statistics
  11-bit adder                                          : 1
  20-bit adder                                          : 1
  8-bit addsub                                          : 1
-# Registers                                            : 6
- 1-bit register                                        : 3
+# Registers                                            : 8
+ 1-bit register                                        : 4
  11-bit register                                       : 1
  20-bit register                                       : 1
+ 3-bit register                                        : 1
  8-bit register                                        : 1
 # Latches                                              : 3
  1-bit latch                                           : 3
-# Multiplexers                                         : 5
+# Multiplexers                                         : 13
+ 1-bit 8-to-1 multiplexer                              : 1
  11-bit 2-to-1 multiplexer                             : 1
  20-bit 2-to-1 multiplexer                             : 1
- 4-bit 2-to-1 multiplexer                              : 3
-# FSMs                                                 : 2
+ 3-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 9
+# FSMs                                                 : 1
 
 =========================================================================
 
@@ -346,11 +330,13 @@ Macro Statistics
  11-bit up counter                                     : 1
  20-bit up counter                                     : 1
  8-bit updown counter                                  : 1
-# Registers                                            : 3
- Flip-Flops                                            : 3
-# Multiplexers                                         : 3
- 4-bit 2-to-1 multiplexer                              : 3
-# FSMs                                                 : 2
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+# Multiplexers                                         : 11
+ 1-bit 8-to-1 multiplexer                              : 1
+ 3-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 9
+# FSMs                                                 : 1
 
 =========================================================================
 
@@ -358,21 +344,7 @@ Macro Statistics
 *                         Low Level Synthesis                           *
 =========================================================================
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <FSM_0> on signal <p_s[1:3]> with user encoding.
--------------------
- State | Encoding
--------------------
- 000   | 000
- 101   | 101
- 010   | 010
- 100   | 100
- 011   | 011
- 001   | 001
- 110   | 110
- 111   | 111
--------------------
-Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <FSM_1> on signal <present_state[1:8]> with one-hot encoding.
+Optimizing FSM <FSM_0> on signal <present_state[1:8]> with one-hot encoding.
 -------------------
  State | Encoding
 -------------------
@@ -385,8 +357,11 @@ Optimizing FSM <FSM_1> on signal <present_state[1:8]> with one-hot encoding.
  0110  | 01000000
  0111  | 10000000
 -------------------
+INFO:Xst:2261 - The FF/Latch <p_s_2> in Unit <debounce> is equivalent to the following FF/Latch, which will be removed : <p_o> 
 
 Optimizing unit <Top_Level> ...
+
+Optimizing unit <debounce> ...
 WARNING:Xst:1710 - FF/Latch <disp/u1/count_10> (without init value) has a constant value of 0 in block <Top_Level>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
@@ -427,11 +402,11 @@ Primitive and Black Box Usage:
 #      GND                         : 1
 #      INV                         : 10
 #      LUT1                        : 20
-#      LUT2                        : 1
+#      LUT2                        : 2
 #      LUT3                        : 2
-#      LUT4                        : 11
+#      LUT4                        : 18
 #      LUT5                        : 9
-#      LUT6                        : 43
+#      LUT6                        : 35
 #      MUXCY                       : 35
 #      VCC                         : 1
 #      XORCY                       : 38
@@ -510,7 +485,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 2.499ns (Maximum Frequency: 400.160MHz)
-   Minimum input arrival time before clock: 1.697ns
+   Minimum input arrival time before clock: 1.299ns
    Maximum output required time after clock: 2.227ns
    Maximum combinational path delay: No path found
 
@@ -521,7 +496,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 2.499ns (frequency: 400.160MHz)
-  Total number of paths / destination ports: 1579 / 92
+  Total number of paths / destination ports: 1496 / 93
 -------------------------------------------------------------------------
 Delay:               2.499ns (Levels of Logic = 12)
   Source:            disp/u1/count_5 (FF)
@@ -534,7 +509,7 @@ Delay:               2.499ns (Levels of Logic = 12)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              2   0.361   0.688  disp/u1/count_5 (disp/u1/count_5)
-     LUT5:I0->O           11   0.097   0.342  disp/u1/tick<10>_SW0 (N4)
+     LUT5:I0->O           11   0.097   0.342  disp/u1/tick<10>_SW0 (N3)
      LUT6:I5->O            1   0.097   0.000  disp/u1/Mcount_count_lut<0> (disp/u1/Mcount_count_lut<0>)
      MUXCY:S->O            1   0.353   0.000  disp/u1/Mcount_count_cy<0> (disp/u1/Mcount_count_cy<0>)
      MUXCY:CI->O           1   0.023   0.000  disp/u1/Mcount_count_cy<1> (disp/u1/Mcount_count_cy<1>)
@@ -576,7 +551,7 @@ Delay:               0.671ns (Levels of Logic = 0)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 49 / 13
 -------------------------------------------------------------------------
-Offset:              1.697ns (Levels of Logic = 10)
+Offset:              1.299ns (Levels of Logic = 10)
   Source:            uphdnl (PAD)
   Destination:       a0/count_7 (FF)
   Destination Clock: clk rising
@@ -585,8 +560,8 @@ Offset:              1.697ns (Levels of Logic = 10)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             9   0.001   0.730  uphdnl_IBUF (uphdnl_IBUF)
-     LUT6:I0->O            1   0.097   0.000  a0/Mcount_count_lut<0> (a0/Mcount_count_lut<0>)
+     IBUF:I->O             9   0.001   0.332  uphdnl_IBUF (uphdnl_IBUF)
+     LUT4:I3->O            1   0.097   0.000  a0/Mcount_count_lut<0> (a0/Mcount_count_lut<0>)
      MUXCY:S->O            1   0.353   0.000  a0/Mcount_count_cy<0> (a0/Mcount_count_cy<0>)
      MUXCY:CI->O           1   0.023   0.000  a0/Mcount_count_cy<1> (a0/Mcount_count_cy<1>)
      MUXCY:CI->O           1   0.023   0.000  a0/Mcount_count_cy<2> (a0/Mcount_count_cy<2>)
@@ -597,8 +572,8 @@ Offset:              1.697ns (Levels of Logic = 10)
      XORCY:CI->O           1   0.370   0.000  a0/Mcount_count_xor<7> (Result<7>)
      FDCE:D                    0.008          a0/count_7
     ----------------------------------------
-    Total                      1.697ns (0.967ns logic, 0.730ns route)
-                                       (57.0% logic, 43.0% route)
+    Total                      1.299ns (0.967ns logic, 0.332ns route)
+                                       (74.4% logic, 25.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'disp/u2/_n0044'
@@ -696,13 +671,13 @@ disp/pixel_w   |         |         |    1.037|         |
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.35 secs
  
 --> 
 
-Total memory usage is 398080 kilobytes
+Total memory usage is 378304 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    4 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

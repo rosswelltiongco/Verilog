@@ -1,115 +1,66 @@
-module debounce(clk_in, reset, sw, db);
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// File name: AISO.v
+// 
+// 
+// Created by        Rosswell Tiongco on 2/13/18
+// Copyright © 2018  Rosswell Tiongco. All rights reserved.
+//
+// In submitting this file for class work at CSULB
+// I am confirming that this is my work and the work
+// of no one else. In submitting this code I acknowledge that
+// plagiarism in student project work is subject to dismissal
+// from the class
+//////////////////////////////////////////////////////////////////////////////////
+module debounce(clk, rst, sw, p_o);
+    input        clk, rst, sw;
+    output       p_o;
 
-	input wire clk_in, reset;
-	input wire sw;
-	output reg db;
+    reg    [2:0] p_s, n_s;
+    reg          p_o, n_o;
 
 
-	
-	parameter
-		zero  = 3'b000,
-		st0_1 = 3'b001,
-		st0_2 = 3'b010,
-		st0_3 = 3'b011,
-		one   = 3'b100,
-		st1_1 = 3'b101,
-		st1_2 = 3'b110,
-		st1_3 = 3'b111;
-	//=============Generating Tick====================
- //count
- wire tick;
- reg [19:0] count;
- // if hit 999999, reset 0
- assign tick = (count == 999999) ? 1'b1: 1'b0;
- 
-	always @ (posedge clk_in, posedge reset)
-		if (reset)
-			count <= 20'b0;
-			else if (tick)
-				count <= 20'b0;
-				else 
-					count <= count + 20'b1;
-// ================================================	
-	
-	
-//=============state machine seq logic======================	
-reg [2:0] p_s;
-reg [2:0] n_s;
+   //=============Generating Tick====================
+    //count
+    wire m_tick;
+    reg [19:0] count;
+    // if hit 999999, reset 0
+    assign m_tick = (count == 999999) ? 1'b1: 1'b0;
+    
+      always @ (posedge clk, posedge rst)
+         if (rst)
+            count <= 20'b0;
+            else if (m_tick)
+               count <= 20'b0;
+               else 
+                  count <= count + 20'b1;
+   // ================================================	
 
-	always @ (posedge clk_in, posedge reset)
-		if (reset)
-			p_s <= zero;
-		else
-			p_s <= n_s;
-	
-	
-	
-	
-//=================================================
+    always @ (posedge clk, posedge rst)     
+        if(rst)
+            begin
+                p_s  <= 3'b000;
+                p_o <= 1'b0;
+            end
 
-//=========state machine combo logic=============
-	
-	always @ (*)
-		begin
-			n_s = p_s;
-			db = 1'b0;
-			case(p_s)
-			 zero:
-			  if (sw)
-					n_s = st1_1;
-			 st1_1:
-					if(~sw)
-						n_s = zero;
-					else
-						if (tick)
-							n_s = st1_2;
-			 st1_2:
-				if (~sw)
-					n_s = zero;
-				else 
-					if (tick)
-						n_s = st1_3;
-			 st1_3:
-				if (~sw)
-					n_s = zero;
-				else
-					if(tick)
-						n_s = one;
-			 one:
-				begin
-				db = 1'b1;
-				if(~sw)
-					n_s = st0_1;
-				end
-			 st0_1:
-			 begin
-				db = 1'b1;
-				if(sw)
-					n_s = one;
-				else
-					if (tick)
-						n_s = st0_2;
-				end
-			 st0_2:
-			 begin
-				db = 1'b1;
-				if(sw)
-					n_s = one;
-				else
-					if (tick)
-						n_s = st0_3;
-				end
-			 st0_3:
-			 begin
-			 db = 1'b1;
-				if(sw)
-					n_s = one;
-				else
-					if (tick)
-						n_s = zero;
-				end
-			default : n_s = zero;
-		endcase
-	end
+        else 
+            begin 
+                p_s  <= n_s;
+                p_o <= n_o;
+            end
 
+    always @ (*)
+        begin 
+            case (p_s)
+            3'b000:  {n_s, n_o} = (sw) ? {3'b001, 1'b0} : {3'b000, 1'b0};
+            3'b001:  {n_s, n_o} = (sw) ? (m_tick) ? {3'b010, 1'b0} : {3'b001, 1'b0} : {3'b000, 1'b0};
+            3'b010:  {n_s, n_o} = (sw) ? (m_tick) ? {3'b011, 1'b0} : {3'b010, 1'b0} : {3'b000, 1'b0};
+            3'b011:  {n_s, n_o} = (sw) ? (m_tick) ? {3'b100, 1'b1} : {3'b011, 1'b0} : {3'b000, 1'b0};
+            3'b100:  {n_s, n_o} = (sw) ? {3'b100, 1'b1} : {3'b101, 1'b1};
+            3'b101:  {n_s, n_o} = (sw) ? {3'b100, 1'b1} : (m_tick) ? {3'b110, 1'b1} : {3'b101, 1'b1};
+            3'b110:  {n_s, n_o} = (sw) ? {3'b100, 1'b1} : (m_tick) ? {3'b111, 1'b1} : {3'b110, 1'b1};
+            3'b111:  {n_s, n_o} = (sw) ? {3'b100, 1'b1} : (m_tick) ? {3'b000, 1'b0} : {3'b111, 1'b1};
+            default: {n_s, n_o} = {3'b000, 1'b0};
+            endcase
+        end        
 endmodule 

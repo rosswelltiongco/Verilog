@@ -1,17 +1,21 @@
 `timescale 1ns / 1ps
- /******************************************************************************
- 
- * Purpose  : This module is a multiplexer that takes in (8) 4 bit data inputs
- *			     and uses a 3 bit selector input to decide which of the 8 data
- *			     inputs to output.
- *            
- *
- ******************************************************************************/
+ //////////////////////////////////////////////////////////////////////////////////
+// File name: ad_mux.v
+// 
+// 
+// Created by        Rosswell Tiongco on 2/13/18
+// Copyright © 2018  Rosswell Tiongco. All rights reserved.
+//
+// In submitting this file for class work at CSULB
+// I am confirming that this is my work and the work
+// of no one else. In submitting this code I acknowledge that
+// plagiarism in student project work is subject to dismissal
+// from the class
+//
+//////////////////////////////////////////////////////////////////////////////////
 module ad_mux( d0, d1, d2, d3, d4, d5, d6, d7, sel, Y );
 	
-	/*
-	8 x 4 bit wide inputs as d0-d7, with a 3 bit selector.
-	*/
+
 	input [3:0] d0, d1, d2, d3, d4, d5, d6, d7;
 	input [2:0] sel;
 	

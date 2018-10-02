@@ -18,8 +18,8 @@ module hextosegment( hex, seg );
 	input [3:0] hex;
 	output reg [6:0] seg;
 
-	always@( * ) begin
-		case( hex )
+	always @ (*) begin
+		case(hex)
 			4'h0    : seg = 7'b0000001;	//hex 0
 			4'h1    : seg = 7'b1001111;	//hex 1
 			4'h2    : seg = 7'b0010010;	//hex 2

@@ -1,0 +1,1002 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.31 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 2.00 secs
+Total CPU time to Xst completion: 1.31 secs
+ 
+--> Reading design: Top_Level.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Top_Level.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Top_Level"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : Top_Level
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\ipcore_dir\stack_ram.v" into library work
+Parsing module <stack_ram>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\ipcore_dir\scratch_ram.v" into library work
+Parsing module <scratch_ram>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\tramelblaze.v" into library work
+Parsing module <tramelblaze>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\pixel_controller.v" into library work
+Parsing module <pixel_controller>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\pixel_clk.v" into library work
+Parsing module <pixel_clk>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\ipcore_dir\tb_rom.v" into library work
+Parsing module <tb_rom>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\hexto7segment.v" into library work
+Parsing module <hextosegment>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\dflop.v" into library work
+Parsing module <dflop>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\ad_mux.v" into library work
+Parsing module <ad_mux>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\tramelblaze_top.v" into library work
+Parsing module <tramelblaze_top>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\SR_flop.v" into library work
+Parsing module <SR_flop>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\PED.v" into library work
+Parsing module <PED>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\load_reg_16.v" into library work
+Parsing module <load_reg_16>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\disp_controller.v" into library work
+Parsing module <disp_controller>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\debounce.v" into library work
+Parsing module <debounce>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\AISO.v" into library work
+Parsing module <AISO>.
+Analyzing Verilog file "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\Top_Level.v" into library work
+Parsing module <Top_Level>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Top_Level>.
+
+Elaborating module <AISO>.
+
+Elaborating module <dflop>.
+
+Elaborating module <debounce>.
+
+Elaborating module <PED>.
+
+Elaborating module <SR_flop>.
+
+Elaborating module <tramelblaze_top>.
+
+Elaborating module <tramelblaze>.
+
+Elaborating module <stack_ram>.
+WARNING:HDLCompiler:1499 - "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\ipcore_dir\stack_ram.v" Line 39: Empty module <stack_ram> remains a black box.
+
+Elaborating module <scratch_ram>.
+WARNING:HDLCompiler:1499 - "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\ipcore_dir\scratch_ram.v" Line 39: Empty module <scratch_ram> remains a black box.
+
+Elaborating module <tb_rom>.
+WARNING:HDLCompiler:1499 - "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\ipcore_dir\tb_rom.v" Line 39: Empty module <tb_rom> remains a black box.
+
+Elaborating module <load_reg_16>.
+
+Elaborating module <disp_controller>.
+
+Elaborating module <pixel_clk>.
+
+Elaborating module <pixel_controller>.
+
+Elaborating module <ad_mux>.
+
+Elaborating module <hextosegment>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Top_Level>.
+    Related source file is "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\Top_Level.v".
+INFO:Xst:3210 - "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\Top_Level.v" line 37: Output port <READ_STROBE> of the instance <u4> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <Top_Level> synthesized.
+
+Synthesizing Unit <AISO>.
+    Related source file is "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\AISO.v".
+    Summary:
+	no macro.
+Unit <AISO> synthesized.
+
+Synthesizing Unit <dflop>.
+    Related source file is "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\dflop.v".
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <dflop> synthesized.
+
+Synthesizing Unit <debounce>.
+    Related source file is "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\debounce.v".
+    Found 3-bit register for signal <p_s>.
+    Found 20-bit register for signal <count>.
+    Found 1-bit register for signal <p_o>.
+    Found 20-bit adder for signal <count[19]_GND_4_o_add_1_OUT> created at line 36.
+    Found 1-bit 8-to-1 multiplexer for signal <n_o> created at line 54.
+    Found 3-bit 8-to-1 multiplexer for signal <n_s> created at line 54.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  24 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+Unit <debounce> synthesized.
+
+Synthesizing Unit <PED>.
+    Related source file is "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\PED.v".
+    Found 1-bit register for signal <meta_reg>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <PED> synthesized.
+
+Synthesizing Unit <SR_flop>.
+    Related source file is "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\SR_flop.v".
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <SR_flop> synthesized.
+
+Synthesizing Unit <tramelblaze_top>.
+    Related source file is "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\tramelblaze_top.v".
+    Summary:
+	no macro.
+Unit <tramelblaze_top> synthesized.
+
+Synthesizing Unit <tramelblaze>.
+    Related source file is "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\tramelblaze.v".
+        INTERRUPT_ADDRESS = 16'b0000111111111110
+        FETCH = 5'b00000
+        DECODE = 5'b00001
+        SECOND = 5'b00010
+        THIRD = 5'b00011
+        EXECUTE = 5'b00100
+        ENDIT = 5'b00101
+        ENDCALL = 5'b00110
+        ENDRET = 5'b00111
+        ENDRET2 = 5'b01000
+        ENDRET3 = 5'b01001
+        OUTPUT_XK_2 = 5'b01010
+        OUTPUT_XY_2 = 5'b01011
+        INPUT_XP_2 = 5'b01100
+        INPUT_XY_2 = 5'b01101
+        FETCH_XK_2 = 5'b01110
+        FETCH_XY_2 = 5'b01111
+        STORE_XK_2 = 5'b10000
+        STORE_XY_2 = 5'b10001
+        NOTHING = 5'b00000
+        ADD = 5'b00001
+        ADDC = 5'b00010
+        AND = 5'b00011
+        SUB = 5'b00100
+        OR = 5'b00101
+        RLX = 5'b00110
+        RRX = 5'b00111
+        SL0X = 5'b01000
+        SL1X = 5'b01001
+        SLAX = 5'b01010
+        SLXX = 5'b01011
+        SR0X = 5'b01100
+        SR1X = 5'b01101
+        SRAX = 5'b01110
+        SRXX = 5'b01111
+        XOR = 5'b10000
+        SUBC = 5'b10001
+        NOP = 7'b0000000
+        ADD_XK = 7'b0000010
+        ADD_XY = 7'b0000100
+        ADDCY_XK = 7'b0000110
+        ADDCY_XY = 7'b0001000
+        AND_XK = 7'b0001010
+        AND_XY = 7'b0001100
+        CALL_AAA = 7'b0001110
+        CALLC_AAA = 7'b0010000
+        CALLNC_AAA = 7'b0010010
+        CALLZ_AAA = 7'b0010100
+        CALLNZ_AAA = 7'b0010110
+        COMP_XK = 7'b0011000
+        COMP_XY = 7'b0011010
+        DISINT = 7'b0011100
+        ENINT = 7'b0011110
+        INPUT_XY = 7'b0100000
+        INPUT_XP = 7'b0100010
+        JUMP_AAA = 7'b0100100
+        JUMPC_AAA = 7'b0100110
+        JUMPNC_AAA = 7'b0101000
+        JUMPZ_AAA = 7'b0101010
+        JUMPNZ_AAA = 7'b0101100
+        LOAD_XK = 7'b0101110
+        LOAD_XY = 7'b0110000
+        OR_XK = 7'b0110010
+        OR_XY = 7'b0110100
+        OUTPUT_XY = 7'b0110110
+        OUTPUT_XK = 7'b0111000
+        RETURN = 7'b0111010
+        RETURN_C = 7'b0111100
+        RETURN_NC = 7'b0111110
+        RETURN_Z = 7'b1000000
+        RETURN_NZ = 7'b1000010
+        RETURN_DIS = 7'b1000100
+        RETURN_EN = 7'b1000110
+        RL_X = 7'b1001000
+        RR_X = 7'b1001010
+        SL0_X = 7'b1001100
+        SL1_X = 7'b1001110
+        SLA_X = 7'b1010000
+        SLX_X = 7'b1010010
+        SR0_X = 7'b1010100
+        SR1_X = 7'b1010110
+        SRA_X = 7'b1011000
+        SRX_X = 7'b1011010
+        SUB_XK = 7'b1011100
+        SUB_XY = 7'b1011110
+        SUBC_XK = 7'b1100000
+        SUBC_XY = 7'b1100010
+        TEST_XK = 7'b1100100
+        TEST_XY = 7'b1100110
+        XOR_XK = 7'b1101000
+        XOR_XY = 7'b1101010
+        FETCH_XK = 7'b1110000
+        FETCH_XY = 7'b1110010
+        STORE_XK = 7'b1110100
+        STORE_XY = 7'b1110110
+    Register <interruptackQ> equivalent to <ldflagPQ> has been removed
+    Found 1-bit register for signal <ldpcQ>.
+    Found 1-bit register for signal <ldirQ>.
+    Found 1-bit register for signal <int_enable>.
+    Found 1-bit register for signal <int_proc>.
+    Found 1-bit register for signal <carryPQ>.
+    Found 1-bit register for signal <zeroPQ>.
+    Found 1-bit register for signal <carryQ>.
+    Found 1-bit register for signal <zeroQ>.
+    Found 1-bit register for signal <ldflagQ>.
+    Found 1-bit register for signal <ldflagPQ>.
+    Found 1-bit register for signal <loadKQ>.
+    Found 1-bit register for signal <wtrfQ>.
+    Found 1-bit register for signal <wtsrQ>.
+    Found 1-bit register for signal <sel_alubQ>.
+    Found 1-bit register for signal <pushQ>.
+    Found 1-bit register for signal <popQ>.
+    Found 1-bit register for signal <enintQ>.
+    Found 1-bit register for signal <disintQ>.
+    Found 1-bit register for signal <sel_portidQ>.
+    Found 1-bit register for signal <enableportidQ>.
+    Found 1-bit register for signal <enableinportQ>.
+    Found 1-bit register for signal <enableoutportQ>.
+    Found 1-bit register for signal <readstrobeQ>.
+    Found 1-bit register for signal <writestrobeQ>.
+    Found 7-bit register for signal <stackPointQ>.
+    Found 16-bit register for signal <inst_reg>.
+    Found 16-bit register for signal <const_reg>.
+    Found 16-bit register for signal <pc>.
+    Found 256-bit register for signal <n0250[255:0]>.
+    Found 17-bit register for signal <alu_out_reg>.
+    Found 4-bit register for signal <stateQ>.
+    Found 2-bit register for signal <sel_pcQ>.
+    Found 3-bit register for signal <sel_rfwQ>.
+    Found 3-bit register for signal <flag_selQ>.
+    Found 5-bit register for signal <alu_opQ>.
+    Found finite state machine <FSM_0> for signal <stateQ>.
+    -----------------------------------------------------------------------
+    | States             | 16                                             |
+    | Transitions        | 59                                             |
+    | Inputs             | 11                                             |
+    | Outputs            | 13                                             |
+    | Clock              | CLK (rising_edge)                              |
+    | Reset              | RESET (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit subtractor for signal <pc_min1> created at line 174.
+    Found 7-bit subtractor for signal <stackPointQ[6]_GND_8_o_sub_10_OUT> created at line 178.
+    Found 17-bit subtractor for signal <GND_8_o_GND_8_o_sub_66_OUT> created at line 310.
+    Found 17-bit subtractor for signal <GND_8_o_GND_8_o_sub_67_OUT> created at line 310.
+    Found 16-bit adder for signal <pc[15]_GND_8_o_add_3_OUT> created at line 158.
+    Found 7-bit adder for signal <stackAdrs[6]_GND_8_o_add_11_OUT> created at line 179.
+    Found 17-bit adder for signal <n0394> created at line 308.
+    Found 17-bit adder for signal <BUS_0004_GND_8_o_add_63_OUT> created at line 308.
+    Found 64x8-bit Read Only RAM for signal <_n2396>
+    Found 16-bit 4-to-1 multiplexer for signal <address_mux> created at line 157.
+    Found 16-bit 16-to-1 multiplexer for signal <regA> created at line 228.
+    Found 16-bit 16-to-1 multiplexer for signal <regB> created at line 229.
+    Found 16-bit 7-to-1 multiplexer for signal <rf_wdata> created at line 232.
+    Found 17-bit 21-to-1 multiplexer for signal <alu_out> created at line 305.
+    Found 1-bit 8-to-1 multiplexer for signal <_n2225> created at line 472.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 Adder/Subtractor(s).
+	inferred 365 D-type flip-flop(s).
+	inferred  80 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <tramelblaze> synthesized.
+
+Synthesizing Unit <load_reg_16>.
+    Related source file is "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\load_reg_16.v".
+    Found 16-bit register for signal <q>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <load_reg_16> synthesized.
+
+Synthesizing Unit <disp_controller>.
+    Related source file is "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\disp_controller.v".
+    Summary:
+	no macro.
+Unit <disp_controller> synthesized.
+
+Synthesizing Unit <pixel_clk>.
+    Related source file is "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\pixel_clk.v".
+    Found 11-bit register for signal <count>.
+    Found 11-bit adder for signal <count[10]_GND_15_o_add_2_OUT> created at line 29.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <pixel_clk> synthesized.
+
+Synthesizing Unit <pixel_controller>.
+    Related source file is "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\pixel_controller.v".
+    Found 4-bit register for signal <p_s>.
+    Found finite state machine <FSM_1> for signal <p_s>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 0                                              |
+    | Outputs            | 19                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:737 - Found 1-bit latch for signal <sel<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sel<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <sel<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   3 Latch(s).
+	inferred   1 Finite State Machine(s).
+Unit <pixel_controller> synthesized.
+
+Synthesizing Unit <ad_mux>.
+    Related source file is "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\ad_mux.v".
+    Found 4-bit 5-to-1 multiplexer for signal <Y> created at line 26.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <ad_mux> synthesized.
+
+Synthesizing Unit <hextosegment>.
+    Related source file is "C:\Users\Rosswell\Documents\460\Counter_Tramelblaze\hexto7segment.v".
+    Found 16x7-bit Read Only RAM for signal <seg>
+    Summary:
+	inferred   1 RAM(s).
+Unit <hextosegment> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port Read Only RAM                    : 1
+ 64x8-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 10
+ 11-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
+ 17-bit adder                                          : 2
+ 17-bit subtractor                                     : 2
+ 20-bit adder                                          : 1
+ 7-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+# Registers                                            : 43
+ 1-bit register                                        : 29
+ 11-bit register                                       : 1
+ 16-bit register                                       : 4
+ 17-bit register                                       : 1
+ 2-bit register                                        : 1
+ 20-bit register                                       : 1
+ 256-bit register                                      : 1
+ 3-bit register                                        : 3
+ 5-bit register                                        : 1
+ 7-bit register                                        : 1
+# Latches                                              : 3
+ 1-bit latch                                           : 3
+# Multiplexers                                         : 91
+ 1-bit 2-to-1 multiplexer                              : 33
+ 1-bit 8-to-1 multiplexer                              : 2
+ 11-bit 2-to-1 multiplexer                             : 1
+ 16-bit 16-to-1 multiplexer                            : 2
+ 16-bit 2-to-1 multiplexer                             : 19
+ 16-bit 4-to-1 multiplexer                             : 1
+ 16-bit 7-to-1 multiplexer                             : 1
+ 17-bit 21-to-1 multiplexer                            : 1
+ 2-bit 2-to-1 multiplexer                              : 12
+ 20-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 6
+ 3-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 6
+ 4-bit 5-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 2
+ 7-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 2
+# Xors                                                 : 2
+ 1-bit xor16                                           : 1
+ 17-bit xor2                                           : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/tb_rom.ngc>.
+Reading core <ipcore_dir/stack_ram.ngc>.
+Reading core <ipcore_dir/scratch_ram.ngc>.
+Loading core <tb_rom> for timing and area information for instance <your_instance_name>.
+Loading core <stack_ram> for timing and area information for instance <stkr>.
+Loading core <scratch_ram> for timing and area information for instance <sr>.
+
+Synthesizing (advanced) Unit <debounce>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <debounce> synthesized (advanced).
+
+Synthesizing (advanced) Unit <hextosegment>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_seg> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 7-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <hex>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <seg>           |          |
+    -----------------------------------------------------------------------
+Unit <hextosegment> synthesized (advanced).
+
+Synthesizing (advanced) Unit <pixel_clk>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <pixel_clk> synthesized (advanced).
+
+Synthesizing (advanced) Unit <tramelblaze>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n2396> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(inst_reg<14:13>,inst_reg<11:12>,inst_reg<10:9>)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <tramelblaze> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x7-bit single-port distributed Read Only RAM        : 1
+ 64x8-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 8
+ 16-bit adder                                          : 1
+ 16-bit subtractor                                     : 1
+ 17-bit adder                                          : 2
+ 17-bit subtractor                                     : 2
+ 7-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+# Counters                                             : 2
+ 11-bit up counter                                     : 1
+ 20-bit up counter                                     : 1
+# Registers                                            : 389
+ Flip-Flops                                            : 389
+# Multiplexers                                         : 89
+ 1-bit 2-to-1 multiplexer                              : 33
+ 1-bit 8-to-1 multiplexer                              : 2
+ 16-bit 16-to-1 multiplexer                            : 2
+ 16-bit 2-to-1 multiplexer                             : 19
+ 16-bit 4-to-1 multiplexer                             : 1
+ 16-bit 7-to-1 multiplexer                             : 1
+ 17-bit 21-to-1 multiplexer                            : 1
+ 2-bit 2-to-1 multiplexer                              : 12
+ 3-bit 2-to-1 multiplexer                              : 6
+ 3-bit 8-to-1 multiplexer                              : 1
+ 4-bit 2-to-1 multiplexer                              : 6
+ 4-bit 5-to-1 multiplexer                              : 1
+ 5-bit 2-to-1 multiplexer                              : 2
+ 7-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 2
+# Xors                                                 : 2
+ 1-bit xor16                                           : 1
+ 17-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_1> on signal <p_s[1:8]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 00000001
+ 0001  | 00000010
+ 0010  | 00000100
+ 0011  | 00001000
+ 0100  | 00010000
+ 0101  | 00100000
+ 0110  | 01000000
+ 0111  | 10000000
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <u4/tramelblaze/FSM_0> on signal <stateQ[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 1000  | 1000
+ 0100  | 0100
+ 0010  | 0010
+ 0011  | 0011
+ 0101  | 0101
+ 0110  | 0110
+ 1101  | 1101
+ 1100  | 1100
+ 1011  | 1011
+ 1010  | 1010
+ 0111  | 0111
+ 1110  | 1110
+ 1111  | 1111
+ 1001  | 1001
+-------------------
+INFO:Xst:2261 - The FF/Latch <p_s_2> in Unit <debounce> is equivalent to the following FF/Latch, which will be removed : <p_o> 
+
+Optimizing unit <load_reg_16> ...
+
+Optimizing unit <Top_Level> ...
+
+Optimizing unit <debounce> ...
+
+Optimizing unit <tramelblaze> ...
+WARNING:Xst:2677 - Node <u4/tramelblaze/readstrobeQ> of sequential type is unconnected in block <Top_Level>.
+WARNING:Xst:1710 - FF/Latch <u6/u1/count_10> (without init value) has a constant value of 0 in block <Top_Level>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Top_Level, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 429
+ Flip-Flops                                            : 429
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Top_Level.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1413
+#      GND                         : 4
+#      INV                         : 44
+#      LUT1                        : 51
+#      LUT2                        : 48
+#      LUT3                        : 95
+#      LUT4                        : 57
+#      LUT5                        : 84
+#      LUT6                        : 659
+#      MUXCY                       : 124
+#      MUXF7                       : 82
+#      MUXF8                       : 32
+#      VCC                         : 4
+#      XORCY                       : 129
+# FlipFlops/Latches                : 432
+#      FDC                         : 92
+#      FDCE                        : 334
+#      FDP                         : 3
+#      LD                          : 3
+# RAMS                             : 4
+#      RAMB18E1                    : 2
+#      RAMB36E1                    : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 3
+#      OBUF                        : 15
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             432  out of  126800     0%  
+ Number of Slice LUTs:                 1038  out of  63400     1%  
+    Number used as Logic:              1038  out of  63400     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1068
+   Number with an unused Flip Flop:     636  out of   1068    59%  
+   Number with an unused LUT:            30  out of   1068     2%  
+   Number of fully used LUT-FF pairs:   402  out of   1068    37%  
+   Number of unique control sets:        15
+
+IO Utilization: 
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of    210     9%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                3  out of    135     2%  
+    Number using Block RAM only:          3
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------+----------------------------+-------+
+Clock Signal                          | Clock buffer(FF name)      | Load  |
+--------------------------------------+----------------------------+-------+
+clk                                   | BUFGP                      | 425   |
+u6/u2/_n0078(u6/u2/p_s_u6/u2/_n0078:O)| NONE(*)(u6/u2/sel_0)       | 3     |
+u6/pixel_w(u6/u1/tick<10>:O)          | NONE(*)(u6/u2/p_s_FSM_FFd7)| 8     |
+--------------------------------------+----------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                           | Buffer(FF name)                                                                                                                                            | Load  |
+---------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+u4/your_instance_name/N1(u4/your_instance_name/XST_GND:G)| NONE(u4/your_instance_name/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_init.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram)| 4     |
+---------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.061ns (Maximum Frequency: 164.997MHz)
+   Minimum input arrival time before clock: 1.908ns
+   Maximum output required time after clock: 2.465ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.061ns (frequency: 164.997MHz)
+  Total number of paths / destination ports: 3262033 / 1213
+-------------------------------------------------------------------------
+Delay:               6.061ns (Levels of Logic = 22)
+  Source:            u4/tramelblaze/regfile_15_176 (FF)
+  Destination:       u4/tramelblaze/zeroQ (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: u4/tramelblaze/regfile_15_176 to u4/tramelblaze/zeroQ
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.361   0.703  u4/tramelblaze/regfile_15_176 (u4/tramelblaze/regfile_15_176)
+     LUT6:I0->O            1   0.097   0.000  u4/tramelblaze/Mmux_regB_51 (u4/tramelblaze/Mmux_regB_51)
+     MUXF7:I1->O           1   0.279   0.000  u4/tramelblaze/Mmux_regB_4_f7 (u4/tramelblaze/Mmux_regB_4_f7)
+     MUXF8:I0->O           8   0.218   0.411  u4/tramelblaze/Mmux_regB_2_f8 (u4/tramelblaze/regB<0>)
+     LUT4:I2->O            1   0.097   0.000  u4/tramelblaze/Madd_n0394_lut<0> (u4/tramelblaze/Madd_n0394_lut<0>)
+     MUXCY:S->O            1   0.353   0.000  u4/tramelblaze/Madd_n0394_cy<0> (u4/tramelblaze/Madd_n0394_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  u4/tramelblaze/Madd_n0394_cy<1> (u4/tramelblaze/Madd_n0394_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  u4/tramelblaze/Madd_n0394_cy<2> (u4/tramelblaze/Madd_n0394_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  u4/tramelblaze/Madd_n0394_cy<3> (u4/tramelblaze/Madd_n0394_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  u4/tramelblaze/Madd_n0394_cy<4> (u4/tramelblaze/Madd_n0394_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  u4/tramelblaze/Madd_n0394_cy<5> (u4/tramelblaze/Madd_n0394_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  u4/tramelblaze/Madd_n0394_cy<6> (u4/tramelblaze/Madd_n0394_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  u4/tramelblaze/Madd_n0394_cy<7> (u4/tramelblaze/Madd_n0394_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  u4/tramelblaze/Madd_n0394_cy<8> (u4/tramelblaze/Madd_n0394_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  u4/tramelblaze/Madd_n0394_cy<9> (u4/tramelblaze/Madd_n0394_cy<9>)
+     XORCY:CI->O           3   0.370   0.305  u4/tramelblaze/Madd_n0394_xor<10> (u4/tramelblaze/n0394<10>)
+     LUT1:I0->O            1   0.097   0.000  u4/tramelblaze/Madd_BUS_0004_GND_8_o_add_63_OUT_cy<10>_rt (u4/tramelblaze/Madd_BUS_0004_GND_8_o_add_63_OUT_cy<10>_rt)
+     MUXCY:S->O            1   0.353   0.000  u4/tramelblaze/Madd_BUS_0004_GND_8_o_add_63_OUT_cy<10> (u4/tramelblaze/Madd_BUS_0004_GND_8_o_add_63_OUT_cy<10>)
+     XORCY:CI->O           1   0.370   0.295  u4/tramelblaze/Madd_BUS_0004_GND_8_o_add_63_OUT_xor<11> (u4/tramelblaze/BUS_0004_GND_8_o_add_63_OUT<11>)
+     LUT6:I5->O            3   0.097   0.389  u4/tramelblaze/Mmux_alu_out77 (u4/tramelblaze/Mmux_alu_out76)
+     LUT5:I3->O            1   0.097   0.379  u4/tramelblaze/Mmux_alu_out169_SW0 (N175)
+     LUT6:I4->O            1   0.097   0.379  u4/tramelblaze/Mmux_zeroX112 (u4/tramelblaze/Mmux_zeroX111)
+     LUT6:I4->O            1   0.097   0.000  u4/tramelblaze/Mmux_zeroX113 (u4/tramelblaze/zeroX)
+     FDCE:D                    0.008          u4/tramelblaze/zeroQ
+    ----------------------------------------
+    Total                      6.061ns (3.198ns logic, 2.863ns route)
+                                       (52.8% logic, 47.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'u6/pixel_w'
+  Clock period: 0.671ns (frequency: 1489.425MHz)
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Delay:               0.671ns (Levels of Logic = 0)
+  Source:            u6/u2/p_s_FSM_FFd1 (FF)
+  Destination:       u6/u2/p_s_FSM_FFd8 (FF)
+  Source Clock:      u6/pixel_w rising
+  Destination Clock: u6/pixel_w rising
+
+  Data Path: u6/u2/p_s_FSM_FFd1 to u6/u2/p_s_FSM_FFd8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.361   0.302  u6/u2/p_s_FSM_FFd1 (u6/u2/p_s_FSM_FFd1)
+     FDP:D                     0.008          u6/u2/p_s_FSM_FFd8
+    ----------------------------------------
+    Total                      0.671ns (0.369ns logic, 0.302ns route)
+                                       (55.0% logic, 45.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 21 / 21
+-------------------------------------------------------------------------
+Offset:              1.908ns (Levels of Logic = 5)
+  Source:            switch (PAD)
+  Destination:       u4/tramelblaze/regfile_15_240 (FF)
+  Destination Clock: clk rising
+
+  Data Path: switch to u4/tramelblaze/regfile_15_240
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.001   0.295  switch_IBUF (switch_IBUF)
+     LUT2:I1->O            1   0.097   0.556  u4/tramelblaze/sel_rfwQ<2>151 (u4/tramelblaze/sel_rfwQ<2>15)
+     LUT6:I2->O            1   0.097   0.295  u4/tramelblaze/sel_rfwQ<2>152 (u4/tramelblaze/sel_rfwQ<2>151)
+     LUT6:I5->O           16   0.097   0.364  u4/tramelblaze/sel_rfwQ<2>153 (u4/tramelblaze/sel_rfwQ<2>_mmx_out9)
+     LUT6:I5->O            1   0.097   0.000  u4/tramelblaze/Mmux_regfile[9][15]_rf_wdata[15]_mux_32_OUT17 (u4/tramelblaze/regfile[9][15]_rf_wdata[15]_mux_32_OUT<0>)
+     FDCE:D                    0.008          u4/tramelblaze/regfile_15_96
+    ----------------------------------------
+    Total                      1.908ns (0.397ns logic, 1.511ns route)
+                                       (20.8% logic, 79.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u6/pixel_w'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              1.056ns (Levels of Logic = 2)
+  Source:            u6/u2/p_s_FSM_FFd1 (FF)
+  Destination:       an<7> (PAD)
+  Source Clock:      u6/pixel_w rising
+
+  Data Path: u6/u2/p_s_FSM_FFd1 to an<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.361   0.302  u6/u2/p_s_FSM_FFd1 (u6/u2/p_s_FSM_FFd1)
+     INV:I->O              1   0.113   0.279  u6/u2/p_s__n0126<0>1_INV_0 (an_7_OBUF)
+     OBUF:I->O                 0.000          an_7_OBUF (an<7>)
+    ----------------------------------------
+    Total                      1.056ns (0.474ns logic, 0.582ns route)
+                                       (44.9% logic, 55.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'u6/u2/_n0078'
+  Total number of paths / destination ports: 112 / 7
+-------------------------------------------------------------------------
+Offset:              2.465ns (Levels of Logic = 4)
+  Source:            u6/u2/sel_0 (LATCH)
+  Destination:       hex_out<6> (PAD)
+  Source Clock:      u6/u2/_n0078 falling
+
+  Data Path: u6/u2/sel_0 to hex_out<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               8   0.472   0.543  u6/u2/sel_0 (u6/u2/sel_0)
+     LUT3:I0->O            1   0.097   0.295  u6/u3/Mmux_Y1_SW0 (N6)
+     LUT6:I5->O            7   0.097   0.584  u6/u3/Mmux_Y1 (u6/hex_w<0>)
+     LUT4:I0->O            1   0.097   0.279  u6/u4/Mram_seg21 (hex_out_2_OBUF)
+     OBUF:I->O                 0.000          hex_out_2_OBUF (hex_out<2>)
+    ----------------------------------------
+    Total                      2.465ns (0.763ns logic, 1.702ns route)
+                                       (30.9% logic, 69.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 112 / 7
+-------------------------------------------------------------------------
+Offset:              2.190ns (Levels of Logic = 4)
+  Source:            u5/q_4 (FF)
+  Destination:       hex_out<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: u5/q_4 to hex_out<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             1   0.361   0.379  u5/q_4 (u5/q_4)
+     LUT3:I1->O            1   0.097   0.295  u6/u3/Mmux_Y1_SW0 (N6)
+     LUT6:I5->O            7   0.097   0.584  u6/u3/Mmux_Y1 (u6/hex_w<0>)
+     LUT4:I0->O            1   0.097   0.279  u6/u4/Mram_seg21 (hex_out_2_OBUF)
+     OBUF:I->O                 0.000          hex_out_2_OBUF (hex_out<2>)
+    ----------------------------------------
+    Total                      2.190ns (0.652ns logic, 1.538ns route)
+                                       (29.8% logic, 70.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.061|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u6/pixel_w
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    1.549|         |         |         |
+u6/pixel_w     |    0.671|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock u6/u2/_n0078
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+u6/pixel_w     |         |         |    1.037|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 32.00 secs
+Total CPU time to Xst completion: 31.76 secs
+ 
+--> 
+
+Total memory usage is 403044 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+

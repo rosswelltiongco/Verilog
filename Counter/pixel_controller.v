@@ -18,29 +18,29 @@ module pixel_controller( clk, reset, a, sel );
 	output reg [7:0] a;
 	output reg [2:0] sel;
 
-	reg [3:0] present_state, next_state;
+	reg [3:0] p_s, n_s;
 
-	always@(  present_state )
-		case( present_state ) 
-			3'b000   : next_state = 3'b001;
-			3'b001   : next_state = 3'b010;			
-			3'b010   : next_state = 3'b011;
-			3'b011   : next_state = 3'b100;
-			3'b100   : next_state = 3'b101;
-			3'b101   : next_state = 3'b110;
-			3'b110   : next_state = 3'b111;
-			3'b111   : next_state = 3'b000;
-			default  : next_state = present_state;
+	always @ (p_s)
+		case(p_s) 
+			3'b000   : n_s = 3'b001;
+			3'b001   : n_s = 3'b010;			
+			3'b010   : n_s = 3'b011;
+			3'b011   : n_s = 3'b100;
+			3'b100   : n_s = 3'b101;
+			3'b101   : n_s = 3'b110;
+			3'b110   : n_s = 3'b111;
+			3'b111   : n_s = 3'b000;
+			default  : n_s = p_s;
 		endcase
 
 	always@( posedge clk or posedge reset )
 		if( reset == 1'b1 )
-			present_state = 3'b000; //Sets the state back to 0
+			p_s = 3'b000; //Sets the state back to 0
 		else
-			present_state = next_state; //Update state register with next state
+			p_s = n_s; //Update state register with next state
 			
-	always@ (  present_state  )
-		case( present_state )
+	always@ (  p_s  )
+		case( p_s )
 			3'b000   : {a, sel} = 11'b1111_1110_000;
 			3'b001   : {a, sel} = 11'b1111_1101_001;
 			3'b010   : {a, sel} = 11'b1111_1011_010;

@@ -19,16 +19,12 @@ module ad_mux( d0, d1, d2, d3, d4, d5, d6, d7, sel, Y );
 	input [3:0] d0, d1, d2, d3, d4, d5, d6, d7;
 	input [2:0] sel;
 	
-	/*
-	the 4 bit output is one of the d0-d7 inputs selected by the 3 bit selector
-	*/
+	//4 bit output is one of the d0-d7 inputs selected by the 3 bit selector
 	output reg [3:0] Y;
 	
-	/*
-	this block changes the output based on the current case of the 3 bit sel
-	*/
-	always@( * )begin
-		case( sel )
+	//changes the output based on current case of the 3 bit sel
+	always @ (*)begin
+		case(sel)
 			3'b000   : Y = d0;
 			3'b001   : Y = d1;
 			3'b010   : Y = d2;

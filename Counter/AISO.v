@@ -16,13 +16,12 @@ module AISO(clk, rst, rst_synch);
    input clk, rst;
    output rst_synch;
 
-   wire qMeta, qOk;
+   wire qMeta, qGood;
    
-   assign rst_synch = ~qOk;
-
    //dflop(clk, rst, d, q)
    dflop u1 (clk, rst, 1'b1, qMeta);
-   dflop u2 (clk, rst, qMeta, qOk);
-   
+   dflop u2 (clk, rst, qMeta, qGood);
+
+   assign rst_synch = ~qGood;   
 
 endmodule 

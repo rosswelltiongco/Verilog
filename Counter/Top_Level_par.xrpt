@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Thu Feb 15 11:38:34 2018">
+  <application stringID="par" timeStamp="Thu Feb 15 16:57:37 2018">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -47,12 +47,12 @@
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="23 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="20 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="21 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="19 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="23 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="21 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="22 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="20 secs "/>
       </section>
     </task>
     <task stringID="PAR_par">
@@ -960,7 +960,7 @@
           </row>
           <row stringID="row" value="143">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="H17"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="count_out&lt;0>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="counter_out&lt;0>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L18P_T2_A24_15"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -1047,7 +1047,7 @@
           </row>
           <row stringID="row" value="157">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="J13"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="count_out&lt;2>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="counter_out&lt;2>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L17N_T2_A25_15"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -1217,7 +1217,7 @@
           </row>
           <row stringID="row" value="177">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="K15"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="count_out&lt;1>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="counter_out&lt;1>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L24P_T3_RS1_15"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -1557,7 +1557,7 @@
           </row>
           <row stringID="row" value="230">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N14"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="count_out&lt;3>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="counter_out&lt;3>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L8P_T1_D11_14"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -1835,7 +1835,7 @@
           </row>
           <row stringID="row" value="270">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="R18"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="count_out&lt;4>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="counter_out&lt;4>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L7P_T1_D09_14"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -2102,7 +2102,7 @@
           </row>
           <row stringID="row" value="304">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="U16"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="count_out&lt;7>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="counter_out&lt;7>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L18P_T2_A12_D28_14"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -2116,7 +2116,7 @@
           </row>
           <row stringID="row" value="305">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="U17"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="count_out&lt;6>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="counter_out&lt;6>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L17P_T2_A14_D30_14"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -2242,7 +2242,7 @@
           </row>
           <row stringID="row" value="323">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="V17"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="count_out&lt;5>"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="counter_out&lt;5>"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB33"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L18N_T2_A11_D27_14"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -2275,7 +2275,7 @@
     </task>
   </application>
 
-  <application stringID="Par" timeStamp="Thu Feb 15 11:38:35 2018">
+  <application stringID="Par" timeStamp="Thu Feb 15 16:57:38 2018">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>

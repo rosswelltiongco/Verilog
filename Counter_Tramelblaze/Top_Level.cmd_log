@@ -1,0 +1,45 @@
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc7a100t-csg324-3 Top_Level.ngc Top_Level.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_Level_map.ncd Top_Level.ngd Top_Level.pcf 
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc nexys4ddr_master.ucf -p xc7a100t-csg324-3 Top_Level.ngc Top_Level.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_Level_map.ncd Top_Level.ngd Top_Level.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_map.ncd Top_Level.ncd Top_Level.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level.twx Top_Level.ncd -o Top_Level.twr Top_Level.pcf -ucf nexys4ddr_master.ucf 
+bitgen -intstyle ise -f Top_Level.ut Top_Level.ncd 
+vhdtdtfi -lib work C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.v -lang verilog -prj Counter_Tramelblaze -o Top_Level.spl -module Top_Level -template C:/Xilinx_ISE_Design_Suite/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 Top_Level.spl C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.sym 
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc nexys4ddr_master.ucf -p xc7a100t-csg324-3 Top_Level.ngc Top_Level.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_Level_map.ncd Top_Level.ngd Top_Level.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_map.ncd Top_Level.ncd Top_Level.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level.twx Top_Level.ncd -o Top_Level.twr Top_Level.pcf -ucf nexys4ddr_master.ucf 
+bitgen -intstyle ise -f Top_Level.ut Top_Level.ncd 
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc nexys4ddr_master.ucf -p xc7a100t-csg324-3 Top_Level.ngc Top_Level.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_Level_map.ncd Top_Level.ngd Top_Level.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_map.ncd Top_Level.ncd Top_Level.pcf 
+bitgen -intstyle ise -f Top_Level.ut Top_Level.ncd 
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc nexys4ddr_master.ucf -p xc7a100t-csg324-3 Top_Level.ngc Top_Level.ngd  
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc nexys4ddr_master.ucf -p xc7a100t-csg324-3 Top_Level.ngc Top_Level.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_Level_map.ncd Top_Level.ngd Top_Level.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_map.ncd Top_Level.ncd Top_Level.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level.twx Top_Level.ncd -o Top_Level.twr Top_Level.pcf -ucf nexys4ddr_master.ucf 
+bitgen -intstyle ise -f Top_Level.ut Top_Level.ncd 
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+xst -intstyle ise -ifn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.xst" -ofn "C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/Top_Level.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc nexys4ddr_master.ucf -p xc7a100t-csg324-3 Top_Level.ngc Top_Level.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o Top_Level_map.ncd Top_Level.ngd Top_Level.pcf 
+par -w -intstyle ise -ol high -mt off Top_Level_map.ncd Top_Level.ncd Top_Level.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Top_Level.twx Top_Level.ncd -o Top_Level.twr Top_Level.pcf -ucf nexys4ddr_master.ucf 
+bitgen -intstyle ise -f Top_Level.ut Top_Level.ncd 

@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// File name: AISO.v
+// File name: debounce.v
 // 
 // 
 // Created by        Rosswell Tiongco on 2/13/18

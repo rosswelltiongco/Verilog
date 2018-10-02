@@ -60,10 +60,7 @@
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="62"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="62"/>
     </file>
-    <file xil_pn:name="../../../Desktop/Counter/dflop.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="5"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="5"/>
-    </file>
+    <file xil_pn:name="../../../Desktop/Counter/dflop.v" xil_pn:type="FILE_VERILOG"/>
     <file xil_pn:name="AISO.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="84"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="10"/>

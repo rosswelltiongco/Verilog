@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2018-10-01T21:01:41</DateModified>
+  <DateModified>2018-10-03T15:57:52</DateModified>
   <ModuleName>Top_Level</ModuleName>
   <SummaryTimeStamp>2018-10-01T18:27:52</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Rosswell/Documents/460/Counter_Tramelblaze/iseconfig/Top_Level.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Rosswell/Documents/460/Counter_Tramelblaze\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Rosswell/Documents/Verilog/Counter_Tramelblaze/iseconfig/Top_Level.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Rosswell/Documents/Verilog/Counter_Tramelblaze\</ImplementationReportsDirectory>
   <DateInitialized>2018-09-26T10:30:19</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

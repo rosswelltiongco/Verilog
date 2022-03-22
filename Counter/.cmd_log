@@ -1,1 +1,0 @@
-vhdtdtfi -lib work C:/Users/Rosswell/Documents/Verilog/Counter/Top_Level.v -lang verilog -prj Counter -o .spl -module {} -template C:/Xilinx_ISE_Design_Suite/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
